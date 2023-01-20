@@ -1,0 +1,168 @@
+.estadisticas {
+	background: #D5D8DC;
+}
+
+.gridContenedor{
+	position: relative;
+	width: 90%;
+	margin: 15px auto;
+	max-width: 1920px;
+	display: grid;
+	grid-gap: 5px;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(3, auto);
+	background: #D5D8DC;
+
+	grid-template-areas:"header header header"
+						"info info info"
+						"graficosPie graficosPie graficosPie"
+						"graficoBar graficoBar graficoBar"
+						"mapa mapa mapa"
+
+
+
+
+}
+
+
+.gridContenedor > div,.gridContenedor .header, .gridContenedor .graficoPIE, .gridContenedor .graficoBar,.gridContenedor .graficosPie, .gridContenedor .bar,.gridContenedor .info,.gridContenedor .datos, .gridContenedor .datoBanner, .gridContenedor.descripcionBanner, .gridContenedor .form , .gridContenedor .mapa
+{
+	width: 90%;
+	background: #fff;
+	padding: 5px;
+	border-radius: 4px;
+	background: #D5D8DC;
+}
+.gridContenedor .header{
+	width: 98%;
+	background: #00008B;
+	color: #fff;
+	text-align: center;
+	grid-column-start: 1;
+	grid-column-end: -1;
+
+}
+
+.gridContenedor .graficosPie{
+	width: 100%;
+
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(1, auto);
+
+	grid-area: graficosPie;
+}
+
+.gridContenedor .graficoPIE{
+	width: 90%; 
+    min-height: 450px;
+
+}
+
+
+
+
+.gridContenedor .graficoBar{
+	width: 95%;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: repeat(1, auto);
+
+	grid-area: graficoBar;
+}
+
+.gridContenedor .bar{
+	
+}
+.gridContenedor .datos{
+	width: 90%;
+	margin: auto;
+	text-align: center;
+	
+	
+}
+.gridContenedor .datoBanner{
+	
+	color: 	#0000FF;
+	font-size: 125%;
+}
+
+
+
+.gridContenedor .info {
+	width: 100%;
+	
+	display: grid;
+	
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(1, auto);
+	grid-area: info;
+
+}
+
+.gridContenedor .form {
+	width: 100%;
+	
+}
+.gridContenedor .mapa{
+	grid-column-start: 1;
+	grid-column-end: -1;
+	
+}
+
+
+	@media screen and (max-width: 1023px){
+	.gridContenedor{
+		width: 100%;
+		grid-template-areas:"header header header"
+							"info info info"
+							"graficosPie graficosPie graficosPie"
+							"graficoBar graficoBar graficoBar";
+	}
+	.gridContenedor .graficosPie{
+		
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: repeat(-1, auto);
+
+		grid-area: graficosPie;
+	}
+	.gridContenedor .graficoPIE{
+	width: 90%; 
+    min-height: 450px;
+}
+
+
+
+
+
+@media screen and (max-width: 720px){
+	.gridContenedor{
+		width: 100%;
+		grid-template-areas:"header header header"
+							"info info info"
+							"graficosPie graficosPie graficosPie"
+							"graficoBar graficoBar graficoBar";
+	}
+	.gridContenedor .graficosPie{
+
+	display: grid;
+	grid-template-columns: repeat(1, 1fr);
+	grid-template-rows: repeat(-1, auto);
+
+	grid-area: graficosPie;
+}
+.gridContenedor .graficoPIE{
+	width: 90%; 
+    min-height: 240px;
+}
+.gridContenedor .info {
+	width: 100%;
+	display: grid;
+	overflow: scroll;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(1, auto);
+	grid-area: info;
+
+}
+
